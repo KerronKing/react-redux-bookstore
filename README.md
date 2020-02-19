@@ -4,7 +4,7 @@ The aim of this project was to build the fast, dynamic and responsive front-end 
 
 ## Live Demo
 
-Click [here]() to see a live demo.
+Click [here](https://kr-bookstore.herokuapp.com/) to see a live demo.
 
 ## Built With
 
