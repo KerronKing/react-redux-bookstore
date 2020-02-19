@@ -1,5 +1,3 @@
-const randomNumber = () => {
-  return Math.floor(Math.random() * 500)
-}
+const randomNumber = () => Math.floor(Math.random() * 500);
 
-export default randomNumber
+export default randomNumber;
