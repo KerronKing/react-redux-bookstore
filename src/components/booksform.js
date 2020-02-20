@@ -18,7 +18,7 @@ const BooksForm = () => {
       <fieldset>
         <select>
           {bookCategories.map(category => (
-            <option key={category.id} value={category}>
+            <option key={category} value={category}>
               {category}
             </option>
           ))}

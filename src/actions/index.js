@@ -3,12 +3,12 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 
 const createAction = book => ({
   type: CREATE_BOOK,
-  id: book.id,
+  book,
 });
 
 const removeAction = book => ({
   type: REMOVE_BOOK,
-  id: book.id,
+  book,
 });
 
 export {

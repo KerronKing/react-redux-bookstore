@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './book';
 
 const Bookslist = () => (
   <table className="table table-inverse">
@@ -10,11 +11,7 @@ const Bookslist = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td />
-        <td />
-        <td />
-      </tr>
+      <Book />
     </tbody>
   </table>
 );
