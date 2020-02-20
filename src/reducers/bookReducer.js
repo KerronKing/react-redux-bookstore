@@ -4,17 +4,17 @@ import randomNumber from '../logic'
 const initialState = {
   books: [
     {
-      id: 1,
+      id: randomNumber(),
       title: 'css',
       category: 'Programming'
     },
     {
-      id: 2,
+      id: randomNumber(),
       title: 'Punctuation',
       category: 'English'
     },
     {
-      id: 3,
+      id: randomNumber(),
       title: 'Polynomials',
       category: 'Mathematics'
     }
