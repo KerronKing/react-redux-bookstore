@@ -1,12 +1,12 @@
-import React from 'react'
-import Bookslist from './containers/bookslist'
-import Booksform from './components/booksform'
+import React from 'react';
+import Bookslist from './containers/bookslist';
+import Booksform from './components/booksform';
 
 const App = () => (
-  <div className='App'>
+  <div className="App">
     <Bookslist />
     <Booksform />
   </div>
-)
+);
 
-export default App
+export default App;
