@@ -13,7 +13,7 @@ const Book = props => {
 };
 
 Book.propTypes = {
-  bookObject: Proptypes.object.isRequired,
+  bookObject: Proptypes.instanceOf(Object).isRequired,
 };
 
 export default Book;

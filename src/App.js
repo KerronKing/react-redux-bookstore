@@ -1,5 +1,5 @@
 import React from 'react';
-import Bookslist from './components/bookslist';
+import Bookslist from './containers/bookslist';
 import Booksform from './components/booksform';
 
 const App = () => (

@@ -16,25 +16,19 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     if (e.target.id === 'formInput') {
-      this.setState({
-        title: e.target.value,
-      });
-    } else if (e.target.id === 'categories') {
-      this.setState({
-        category: e.target.value,
-      });
+      this.setState({ title: e.target.value });
+    } else {
+      this.setState({ category: e.target.value });
     }
-    console.log(e.target.id);
   }
 
   handleSubmit() {
     const { addBook } = this.props;
-    addBook(createAction);
+    addBook(this.state);
     this.setState({
       title: '',
       category: '',
     });
-    console.log('submitted');
   }
 
   render() {
@@ -54,7 +48,8 @@ class BooksForm extends React.Component {
           </label>
         </fieldset>
         <fieldset>
-          <select id="categories" onClick={this.handleChange}>
+          <select id="categories" onChange={this.handleChange} defaultValue="Select">
+            <option value="Select" disabled>Select</option>
             {bookCategories.map(category => (
               <option key={category} value={category}>
                 {category}
@@ -69,7 +64,7 @@ class BooksForm extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addBook: () => dispatch(createAction()),
+  addBook: book => dispatch(createAction(book)),
 });
 
 BooksForm.propTypes = {

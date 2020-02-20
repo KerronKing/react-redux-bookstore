@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Proptypes from 'prop-types';
-import Book from './book';
+import Book from '../components/book';
 import { createAction, removeAction } from '../actions/index';
 
 const Bookslist = props => {
@@ -23,7 +23,7 @@ const Bookslist = props => {
 };
 
 const mapStateToProps = state => ({
-  books: state.books,
+  books: state.book.books,
 });
 const mapDispatchToProps = dispatch => ({
   addBook: () => dispatch(createAction()),
@@ -31,7 +31,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Bookslist.propTypes = {
-  books: Proptypes.array.isRequired,
+  books: Proptypes.instanceOf(Array).isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bookslist);
