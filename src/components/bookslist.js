@@ -1,12 +1,13 @@
-import React from 'react'
-import Book from './book'
-import { createAction, removeAction } from '../actions/index'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import Proptypes from 'prop-types';
+import Book from './book';
+import { createAction, removeAction } from '../actions/index';
 
-const Bookslist = (props) => {
-  console.log(props.books)
+const Bookslist = props => {
+  const { books } = props;
   return (
-    <table className='table table-inverse'>
+    <table className="table table-inverse">
       <thead>
         <tr>
           <th>Book id</th>
@@ -15,18 +16,22 @@ const Bookslist = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.books.map((book, index) => <Book key={index} bookObject={book} />)}
+        {books.map(book => <Book key={book.id} bookObject={book} />)}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
 const mapStateToProps = state => ({
-  books: state.books
-})
+  books: state.books,
+});
 const mapDispatchToProps = dispatch => ({
   addBook: () => dispatch(createAction()),
-  removeBook: () => dispatch(removeAction())
-})
+  removeBook: () => dispatch(removeAction()),
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Bookslist)
+Bookslist.propTypes = {
+  books: Proptypes.array.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Bookslist);

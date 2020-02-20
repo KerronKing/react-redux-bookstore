@@ -1,16 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import Proptypes from 'prop-types'
+import React from 'react';
+import Proptypes from 'prop-types';
 
 const Book = props => {
-  const { id, title, category } = props.bookObject
+  const { bookObject } = props;
   return (
     <tr>
-      <td>{id}</td>
-      <td>{title}</td>
-      <td>{category}</td>
+      <td>{bookObject.id}</td>
+      <td>{bookObject.title}</td>
+      <td>{bookObject.category}</td>
     </tr>
-  )
-}
+  );
+};
 
-export default Book
+Book.propTypes = {
+  bookObject: Proptypes.object.isRequired,
+};
+
+export default Book;
