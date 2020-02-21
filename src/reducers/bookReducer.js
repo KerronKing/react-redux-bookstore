@@ -24,14 +24,18 @@ const initialState = {
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
-      return [
-        ...state,
-        action.book,
-      ];
+      return {
+        books: [
+          ...state.books,
+          action.book,
+        ],
+      };
     case REMOVE_BOOK:
-      return [
-        ...state,
-      ];
+      return {
+        books: [
+          ...state.books,
+        ],
+      };
     default:
       return state;
   }

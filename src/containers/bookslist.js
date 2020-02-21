@@ -31,7 +31,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Bookslist.propTypes = {
-  books: Proptypes.instanceOf(Array).isRequired,
+  books: Proptypes.instanceOf(Object).isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Bookslist);

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Proptypes from 'prop-types';
 import { createAction } from '../actions/index';
+import randomNumber from '../logic';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -22,13 +23,21 @@ class BooksForm extends React.Component {
     }
   }
 
-  handleSubmit() {
+  handleSubmit(event) {
+    event.preventDefault();
     const { addBook } = this.props;
-    addBook(this.state);
+    const inputField = document.getElementById('formInput');
+
+    const book = {
+      id: randomNumber(),
+      ...this.state,
+    };
+    addBook(book);
     this.setState({
       title: '',
       category: '',
     });
+    inputField.value = '';
   }
 
   render() {
@@ -57,11 +66,15 @@ class BooksForm extends React.Component {
             ))}
           </select>
         </fieldset>
-        <button type="submit" onSubmit={this.handleSubmit}>Submit</button>
+        <button type="submit" onClick={this.handleSubmit}>Submit</button>
       </form>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  books: state.book.books,
+});
 
 const mapDispatchToProps = dispatch => ({
   addBook: book => dispatch(createAction(book)),
@@ -71,4 +84,4 @@ BooksForm.propTypes = {
   addBook: Proptypes.func.isRequired,
 };
 
-export default connect(null, mapDispatchToProps)(BooksForm);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
