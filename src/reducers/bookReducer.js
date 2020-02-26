@@ -1,25 +1,26 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
-import randomNumber from '../logic';
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index'
+import randomNumber from '../logic'
 
 const initialState = {
   books: [
     {
       id: randomNumber(),
       title: 'CSS Secrets',
-      category: 'Learning',
+      category: 'Learning'
     },
     {
       id: randomNumber(),
       title: 'The Art of War',
-      category: 'History',
+      category: 'History'
     },
     {
       id: randomNumber(),
       title: 'Cat in The Hat',
-      category: 'Kids',
-    },
+      category: 'Kids'
+    }
   ],
-};
+  filter: 'All'
+}
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -27,18 +28,18 @@ const booksReducer = (state = initialState, action) => {
       return {
         books: [
           ...state.books,
-          action.book,
-        ],
-      };
+          action.book
+        ]
+      }
     case REMOVE_BOOK:
       return {
         books: [
-          ...state.books,
-        ].filter(book => book !== action.book),
-      };
+          ...state.books
+        ].filter(book => book !== action.book)
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default booksReducer;
+export { booksReducer, initialState }
