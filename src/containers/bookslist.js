@@ -37,7 +37,7 @@ class Bookslist extends React.Component {
               <th>Remove</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody> 
             {
               books.map(book => (
                 <Book
@@ -52,7 +52,7 @@ class Bookslist extends React.Component {
         <CategoryFilter handleFilterChange={this.handleFilterChange}/>
       </div>
     )
-  }
+  } 
 }
 
 const mapStateToProps = state => ({
