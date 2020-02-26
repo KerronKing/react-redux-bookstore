@@ -5,18 +5,18 @@ const initialState = {
   books: [
     {
       id: randomNumber(),
-      title: 'css',
-      category: 'Programming',
+      title: 'CSS Secrets',
+      category: 'Learning',
     },
     {
       id: randomNumber(),
-      title: 'Punctuation',
-      category: 'English',
+      title: 'The Art of War',
+      category: 'History',
     },
     {
       id: randomNumber(),
-      title: 'Polynomials',
-      category: 'Mathematics',
+      title: 'Cat in The Hat',
+      category: 'Kids',
     },
   ],
 };

@@ -9,7 +9,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: '',
+      category: 'Action',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,7 +35,7 @@ class BooksForm extends React.Component {
     addBook(book);
     this.setState({
       title: '',
-      category: '',
+      category: 'Action',
     });
     inputField.value = '';
   }
@@ -57,8 +57,7 @@ class BooksForm extends React.Component {
           </label>
         </fieldset>
         <fieldset>
-          <select id="categories" onChange={this.handleChange} defaultValue="Select">
-            <option value="Select" disabled>Select</option>
+          <select id="categories" onChange={this.handleChange}>
             {bookCategories.map(category => (
               <option key={category} value={category}>
                 {category}
