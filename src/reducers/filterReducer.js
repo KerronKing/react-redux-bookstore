@@ -1,7 +1,11 @@
 import { CHANGE_FILTER } from '../actions/index';
-import initialState from './bookReducer';
+// import initialState from './bookReducer';
 
-const filterReducer = (state = initialState, action) => {
+const filterState = {
+  filter: '',
+};
+
+const filterReducer = (state = filterState, action) => {
   switch (action.type) {
     case CHANGE_FILTER:
       if (action.category === 'All') {

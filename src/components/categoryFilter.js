@@ -4,7 +4,7 @@ import Proptypes from 'prop-types';
 class CategoryFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.filterBook.bind(this);
+    this.filterBook = this.filterBook.bind(this);
   }
 
   filterBook() {

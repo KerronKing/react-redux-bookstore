@@ -19,7 +19,6 @@ const initialState = {
       category: 'Kids',
     },
   ],
-  filter: '',
 };
 
 const booksReducer = (state = initialState, action) => {
@@ -42,4 +41,4 @@ const booksReducer = (state = initialState, action) => {
   }
 };
 
-export default { booksReducer, initialState };
+export default booksReducer;
