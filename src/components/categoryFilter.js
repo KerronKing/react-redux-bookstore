@@ -1,16 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-const CategoryFilter = () => {
-  const filterCategories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const CategoryFilter = (props) => {
+  const filterCategories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi']
   return (
-    <fieldset>
-      {filterCategories.map(category => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </fieldset>
-  );
-};
+    <form>
+      <fieldset>
+        {filterCategories.map(category => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </fieldset>
+      <button>Filter</button>
+    </form>
+  )
+}
 
-export default CategoryFilter;
+export default CategoryFilter
