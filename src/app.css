@@ -54,3 +54,30 @@
 	border-radius: 50%;
 	color: #037bff;
 }
+
+h3 { 
+	font-size: 1.2rem;
+}
+.add-form {
+	margin: 0 auto; 
+	width: 88.8%; 
+}
+form {
+	display: flex;
+	flex-direction: row;
+}
+fieldset {
+	padding-right: 1.5rem;
+}
+.form-group { width: 52%; }
+.select-cats {
+	width: 30%;
+}
+#categories {
+	border: 1px solid #ced4da; 
+	height: 70%;
+}
+.submit {
+	height: 70%;
+	width: 18%;
+}

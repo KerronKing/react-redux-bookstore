@@ -43,10 +43,10 @@ class BooksForm extends React.Component {
   render() {
     const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
-      <form>
-        <fieldset className="form-group">
-          <label htmlFor="formInput">
-            title
+      <div className="add-form">
+        <h3>ADD NEW BOOK</h3>
+        <form>
+          <fieldset className="form-group">
             <input
               type="text"
               className="form-control"
@@ -54,19 +54,19 @@ class BooksForm extends React.Component {
               id="formInput"
               onChange={this.handleChange}
             />
-          </label>
-        </fieldset>
-        <fieldset>
-          <select id="categories" onChange={this.handleChange}>
-            {bookCategories.map(category => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </fieldset>
-        <button type="submit" onClick={this.handleSubmit}>Submit</button>
-      </form>
+          </fieldset>
+          <fieldset className="select-cats">
+            <select id="categories" onChange={this.handleChange} className="w-100">
+              {bookCategories.map(category => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+          <button className="btn btn-primary submit" type="submit" onClick={this.handleSubmit}>Submit</button>
+        </form>
+      </div>
     );
   }
 }
