@@ -1,0 +1,56 @@
+.App {
+	background: rgb(245, 246, 250);
+}
+
+#book-store-h1 {
+	font-weight: bold;
+}
+
+#books-h5 {
+	line-height: 3;
+}
+
+#categories-h5{
+	line-height: 3;
+	color: grey;
+	opacity: 0.5;
+}
+
+.table-category {
+	color: grey;
+	position: relative;
+	top: 15px;
+}
+
+.table-title {
+	font-size: 1.3em;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+
+.table {
+	border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.table-remove {
+	color: #378ae6;
+	cursor: pointer;
+}
+
+.table-row {
+	border: .5px solid #80808045;
+	width: 50%;
+	background: white;
+}
+
+.table-container {
+	width: 92%;
+}
+
+.user-icon {
+	padding: 15px;
+	border: 1px solid #d4cdcd;
+	border-radius: 50%;
+	color: #037bff;
+}
