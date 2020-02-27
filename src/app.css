@@ -34,8 +34,10 @@
 }
 
 .table-remove {
+	border: none;
 	color: #378ae6;
 	cursor: pointer;
+	margin-left: -0.5rem;
 }
 
 .table-row {
@@ -57,9 +59,11 @@
 
 h3 { 
 	font-size: 1.2rem;
+	opacity: 0.6;
 }
 .add-form {
-	margin: 0 auto; 
+	margin: 0 auto;
+	padding-bottom: 7rem;
 	width: 88.8%; 
 }
 form {
@@ -80,4 +84,15 @@ fieldset {
 .submit {
 	height: 70%;
 	width: 18%;
+}
+#category-filter {
+	padding-bottom: 2rem;
+	position: absolute;
+	bottom: -8rem;
+}
+.filter-btn {
+	width: 10rem;
+}
+#filter-categories {
+	height: 2.4rem;
 }
