@@ -45,7 +45,7 @@ class BooksForm extends React.Component {
     return (
       <div className="add-form">
         <h3>ADD NEW BOOK</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <fieldset className="form-group">
             <input
               type="text"
@@ -53,6 +53,7 @@ class BooksForm extends React.Component {
               placeholder="Enter a book Title"
               id="formInput"
               onChange={this.handleChange}
+              required
             />
           </fieldset>
           <fieldset className="select-cats">
@@ -64,7 +65,7 @@ class BooksForm extends React.Component {
               ))}
             </select>
           </fieldset>
-          <button className="btn btn-primary submit" type="submit" onClick={this.handleSubmit}>Submit</button>
+          <button className="btn btn-primary submit" type="submit">Submit</button>
         </form>
       </div>
     );

@@ -16,6 +16,8 @@
 	opacity: 0.5;
 }
 
+.table-div { margin-top: 4rem; }
+
 .table-category {
 	color: grey;
 	position: relative;
@@ -30,7 +32,7 @@
 
 .table {
 	border-collapse: separate;
-    border-spacing: 0 15px;
+  border-spacing: 0 15px;
 }
 
 .table-remove {
@@ -60,6 +62,7 @@
 h3 { 
 	font-size: 1.2rem;
 	opacity: 0.6;
+	padding-right: 1rem;
 }
 .add-form {
 	margin: 0 auto;
@@ -86,9 +89,11 @@ fieldset {
 	width: 18%;
 }
 #category-filter {
+	display: flex;
+	flex-direction: row;
 	padding-bottom: 2rem;
 	position: absolute;
-	bottom: -8rem;
+	top: 7.3rem;
 }
 .filter-btn {
 	width: 10rem;

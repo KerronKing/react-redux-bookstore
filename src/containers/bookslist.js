@@ -33,7 +33,7 @@ class Bookslist extends React.Component {
     }
 
     return (
-      <div className="container-fluid mt-5 table-container">
+      <div className="container-fluid table-container table-div">
         <table className="table table-inverse">
           <tbody>
             {
