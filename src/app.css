@@ -1,0 +1,103 @@
+.App {
+	background: rgb(245, 246, 250);
+}
+
+#book-store-h1 {
+	font-weight: bold;
+}
+
+#books-h5 {
+	line-height: 3;
+}
+
+#categories-h5{
+	line-height: 3;
+	color: grey;
+	opacity: 0.5;
+}
+
+.table-div { margin-top: 4rem; }
+
+.table-category {
+	color: grey;
+	position: relative;
+	top: 15px;
+}
+
+.table-title {
+	font-size: 1.3em;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+
+.table {
+	border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.table-remove {
+	border: none;
+	color: #378ae6;
+	cursor: pointer;
+	margin-left: -0.5rem;
+}
+
+.table-row {
+	border: .5px solid #80808045;
+	width: 50%;
+	background: white;
+}
+
+.table-container {
+	width: 92%;
+}
+
+.user-icon {
+	padding: 15px;
+	border: 1px solid #d4cdcd;
+	border-radius: 50%;
+	color: #037bff;
+}
+
+h3 { 
+	font-size: 1.2rem;
+	opacity: 0.6;
+	padding-right: 1rem;
+}
+.add-form {
+	margin: 0 auto;
+	padding-bottom: 7rem;
+	width: 88.8%; 
+}
+form {
+	display: flex;
+	flex-direction: row;
+}
+fieldset {
+	padding-right: 1.5rem;
+}
+.form-group { width: 52%; }
+.select-cats {
+	width: 30%;
+}
+#categories {
+	border: 1px solid #ced4da; 
+	height: 70%;
+}
+.submit {
+	height: 70%;
+	width: 18%;
+}
+#category-filter {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 2rem;
+	position: absolute;
+	top: 7.3rem;
+}
+.filter-btn {
+	width: 10rem;
+}
+#filter-categories {
+	height: 2.4rem;
+}

@@ -15,11 +15,13 @@ class Book extends React.Component {
   render() {
     const { bookObject } = this.props;
     return (
-      <tr>
-        <td>{bookObject.id}</td>
-        <td>{bookObject.title}</td>
-        <td>{bookObject.category}</td>
-        <td><button onClick={this.removeBook} type="button">Remove Book</button></td>
+      <tr className="pl-5 table-row">
+        <td className="table-row pl-5">
+          <p className="table-category">{bookObject.category}</p>
+          <p className="table-title">{bookObject.title}</p>
+          <button type="submit" className="table-remove" onClick={this.removeBook}>Remove Book</button>
+        </td>
+
       </tr>
     );
   }

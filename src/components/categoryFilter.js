@@ -16,18 +16,21 @@ class CategoryFilter extends React.Component {
   render() {
     const filterCategories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
-      <form>
-        <fieldset>
-          <select id="filter-categories" onChange={this.handleChange}>
-            {filterCategories.map(category => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </fieldset>
-        <button type="button" onClick={this.filterBook}>Filter</button>
-      </form>
+      <div id="category-filter">
+        <h3>FILTER</h3>
+        <form>
+          <fieldset>
+            <select id="filter-categories" onChange={this.handleChange}>
+              {filterCategories.map(category => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </fieldset>
+          <button type="button" onClick={this.filterBook} className="btn btn-primary filter-btn">Filter</button>
+        </form>
+      </div>
     );
   }
 }

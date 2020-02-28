@@ -33,16 +33,8 @@ class Bookslist extends React.Component {
     }
 
     return (
-      <div>
+      <div className="container-fluid table-container table-div">
         <table className="table table-inverse">
-          <thead>
-            <tr>
-              <th>Book id</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
           <tbody>
             {
               filteredBooks.map(book => (
